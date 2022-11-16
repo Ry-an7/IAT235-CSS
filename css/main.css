@@ -1,0 +1,85 @@
+/*
+CSS file for IAT235 CSS Tutorial
+
+how css layout works:
+
+selector{
+    property:value;
+    property:value;
+}
+
+*/
+
+body{
+    font-family: Helvetica, Arial, sans-serif; /*helvetica first, then arial, then sans-serif font (fallback)*/
+    font-size: 1.25rem; /*1.25 relative to root fontsize, default browser font size 16pt*/
+    margin: 1rem;
+    background-color: rgb(220, 220, 220);
+}
+
+h1{
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+h2{
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+h3{
+    font-size: 1.6rem;
+    margin-bottom: 0;
+}
+
+p, ol, ul{ /*forgetting commas will make it look for a child of a ul of a child of a ol of a child of a p*/
+    font-size: 1rem;
+}
+
+img{
+    height: auto; /*resize height when width changes auto*/
+    max-width: 100%; /*when image is more than 100% of page, then it will resize (shrinking page)*/
+}
+
+figure{
+    margin: 0;
+}
+
+figcaption{
+    font-style: italic;
+}
+
+a{
+    color: rgb(200, 0, 0);
+    text-decoration: none;
+
+    transition-property: color; /*animate the text colour change*/
+    transition-duration: 0.5s;
+}
+
+a:hover, a:focus, a:active{ /*will override color when hover, focus, active are true*/
+    color: rgb(50, 0, 0);
+}
+
+.nav-main-item{ /*calling classes, not elements*/
+    display: inline-block;
+    background-color: rgb(250, 100, 75);
+    font-size: 1.5rem;
+    color: white;
+    padding: 0.5rem 0.75rem;
+
+    transition-property: background-color; /*animate background of nav-main-item change color*/
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+.nav-main-item:hover, .nav-main-item:active, .nav-main-item:focus{
+    background-color: rgb(50, 50, 50);
+}
+
+.main-container{
+    max-width: 63rem; /*fixed width for max-container*/
+    margin: 1rem auto; /*margin 0 for top and bottom, auto for left and right*/
+    background-color: white;
+    padding: 1rem;
+}
